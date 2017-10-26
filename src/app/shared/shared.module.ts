@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ContactsService } from './services/contacts.service';
 import { HttpClientModule } from '@angular/common/http';
+import { AuthService } from '../shared/services/auth.service';
+
 
 @NgModule({
   imports: [
@@ -9,7 +11,8 @@ import { HttpClientModule } from '@angular/common/http';
     HttpClientModule
   ],
   providers: [
-  	ContactsService
+  	ContactsService,
+    AuthService
   ],
   declarations: [
   ],

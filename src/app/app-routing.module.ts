@@ -4,6 +4,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { ContactsComponent } from './components/contacts/contacts.component';
 import { ContactDetailsComponent } from './components/contacts/contact-details/contact-details.component';
 
+import { LoginComponent } from './components/auth/login/login.component';
+
 const appRoutes: Routes = [
   {
     path: '',
@@ -16,9 +18,13 @@ const appRoutes: Routes = [
     children: [
       {
         path: ':id',
-        component: ContactDetailsComponent
+        component: ContactDetailsComponent,
       }
     ]
+  },
+  {
+    path: 'login',
+    component: LoginComponent,
   }
 ];
 
